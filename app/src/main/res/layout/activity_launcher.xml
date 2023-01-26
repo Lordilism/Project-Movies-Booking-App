@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.LauncherActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="@dimen/width_logo_image"
+            android:layout_height="@dimen/height_logo_image"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/ic_logo" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGetStarted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_marginEnd="@dimen/margin_medium_3"
+            android:layout_marginBottom="@dimen/margin_medium_2"
+            android:backgroundTint="@color/colorAccent"
+            android:text="Get Started"
+            android:textColor="@color/colorSecondaryText"
+            app:cornerRadius="@dimen/margin_medium_2" />
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
