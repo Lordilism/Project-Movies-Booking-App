@@ -4,13 +4,14 @@
     android:layout_marginStart="@dimen/margin_medium"
     android:layout_marginTop="@dimen/margin_medium"
     android:layout_marginEnd="@dimen/margin_medium"
+
     android:layout_height="100dp">
 
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:background="@drawable/ic_date_shape" />
+        android:background="@drawable/placeholder_date" />
 
     <RelativeLayout
         android:layout_width="wrap_content"

@@ -1,9 +1,10 @@
 package com.example.moviesbookingapp.activities
 
 import android.os.Bundle
+import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import com.example.moviesbookingapp.R
-import kotlinx.android.synthetic.main.activity_launcher.*
+
 
 class LauncherActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,9 +14,10 @@ class LauncherActivity : AppCompatActivity() {
     }
 
     private fun navigateToLogin() {
-        btnGetStarted.setOnClickListener {
+        Handler().postDelayed(Runnable {
             startActivity(LogInActivity.newIntent(this))
-        }
+            finish()
+        }, 3000)
 
     }
 }

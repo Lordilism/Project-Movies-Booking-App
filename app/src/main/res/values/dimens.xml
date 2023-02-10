@@ -36,4 +36,5 @@
     <dimen name="width_logo_image_text">88dp</dimen>
     <dimen name="height_logo_image_text">24dp</dimen>
     <dimen name="text_smallest">8sp</dimen>
+
 </resources>

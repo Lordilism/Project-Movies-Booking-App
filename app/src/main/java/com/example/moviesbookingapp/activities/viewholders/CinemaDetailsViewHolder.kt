@@ -5,9 +5,10 @@ import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moviesbookingapp.activities.adapters.ShowTimeAdapter
+import com.example.moviesbookingapp.activities.delegates.DateDelegate
 import kotlinx.android.synthetic.main.viewholder_cinema_details.view.*
 
-class CinemaDetailsViewHolder(itemView: View, var isExpanded: Boolean, val context: Context) : RecyclerView.ViewHolder(itemView) {
+class CinemaDetailsViewHolder(itemView: View, var isExpanded: Boolean, val context: Context,val delegate: DateDelegate) : RecyclerView.ViewHolder(itemView) {
     init {
         isExpanded = false
         itemView.rlHideView.visibility = View.GONE
@@ -15,10 +16,11 @@ class CinemaDetailsViewHolder(itemView: View, var isExpanded: Boolean, val conte
         itemView.tvSeeDetals.setOnClickListener {
             setUpVisibilityOfLayout()
         }
+
     }
 
     private fun setUpRecyclerViewTime() {
-        itemView.rvCinemaShowdate.adapter = ShowTimeAdapter()
+        itemView.rvCinemaShowdate.adapter = ShowTimeAdapter(delegate)
         itemView.rvCinemaShowdate.layoutManager = GridLayoutManager(this.context,3,GridLayoutManager.VERTICAL,false)
     }
 

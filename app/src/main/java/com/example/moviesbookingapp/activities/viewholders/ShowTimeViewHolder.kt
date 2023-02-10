@@ -1,14 +1,16 @@
 package com.example.moviesbookingapp.activities.viewholders
 
 import android.view.View
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.RecyclerView
-import com.example.moviesbookingapp.activities.GetOTPActivity
+import com.example.moviesbookingapp.activities.delegates.DateDelegate
 
-class ShowTimeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+class ShowTimeViewHolder(itemView: View, val delegate: DateDelegate) :
+    RecyclerView.ViewHolder(itemView) {
     init {
         itemView.setOnClickListener {
-            
+
+            delegate.onTapDate()
+
         }
     }
 }

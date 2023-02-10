@@ -6,9 +6,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.moviesbookingapp.R
 import com.example.moviesbookingapp.activities.viewholders.DateViewHolder
 
-class DateAdapter(): RecyclerView.Adapter<DateViewHolder>() {
+class DateAdapter() : RecyclerView.Adapter<DateViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DateViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.viewholder_date,parent,false)
+        val view =
+            LayoutInflater.from(parent.context).inflate(R.layout.viewholder_date, parent, false)
 
         return DateViewHolder(view)
     }
