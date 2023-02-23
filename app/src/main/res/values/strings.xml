@@ -19,5 +19,19 @@
     <string name="lbl_50_refund_between_2_hours_and_20_minutes_before_show_start_time">-50% refund between 2 hours and 20 minutes before show start time</string>
     <string name="lbl_refund_not_available_for_convenience_fees_vouchers_gift_cards_taxes_etc">Refund not available for Convenience fees,Vouchers, Gift Cards, Taxes etc.</string>
     <string name="lbl_no_cancelation_within_20minute_of_show_start_time">No cancelation within 20minute of show\nstart time.</string>
-    <string name="lbl_your_name">Your Name</string>
+    <string name="lbl_your_name">Enter Your Name</string>
+    <string name="lbl_ticket_details">Ticket Details</string>
+    <string name="lbl_cinema_details">Cinema Details</string>
+    <string name="lbl_jcgv_junction_city">JCGV:Junction City</string>
+    <string name="lbl_facilities">Facilities</string>
+    <string name="lbl_wheel_chair">Wheel Chair</string>
+    <string name="lbl_online_food">Online Food</string>
+    <string name="lbl_parking">Parking</string>
+    <string name="lbl_thermanal_scanning">Thermanal Scanning</string>
+    <string name="lbl_contactless_security_check">Contactless Security Check</string>
+    <string name="lbl_santization_before_every_show">Santization Before every show</string>
+    <string name="lbl_disposable_3d_glass">Disposable 3D glass</string>
+    <string name="lbl_contactless_food_services">Contactless Food Services</string>
+    <string name="lbl_package_food">Package Food</string>
+    <string name="lbl_deep_cleaning_of_rest_room">Deep Cleaning of Rest Room</string>
 </resources>

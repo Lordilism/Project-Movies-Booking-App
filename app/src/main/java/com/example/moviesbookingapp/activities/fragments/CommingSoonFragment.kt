@@ -31,7 +31,6 @@ class CommingSoonFragment : Fragment(), MoviesDelegate {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         view.rvMoviesFromComingSoon.adapter = NowShowingAdapter(false, this)
-
         view.rvMoviesFromComingSoon.layoutManager =
             GridLayoutManager(this.context, 2, GridLayoutManager.VERTICAL, false)
 

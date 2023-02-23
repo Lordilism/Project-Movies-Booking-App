@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import com.example.moviesbookingapp.R
 import com.example.moviesbookingapp.activities.adapters.AdapterBanner
 import com.example.moviesbookingapp.activities.adapters.NSCSAdapter
+import com.example.moviesbookingapp.activities.delegates.FlagForSearch
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.fragment_movies.*
@@ -18,6 +19,9 @@ import kotlinx.android.synthetic.main.fragment_movies.view.*
 class MoviesFragment : Fragment() {
 
 
+    companion object{
+
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -47,16 +51,20 @@ class MoviesFragment : Fragment() {
             when(position){
 
                 0-> tab.text ="Now Showing"
+
                 else-> tab.text= "Coming Soon"
 
             }
         }.attach()
+
     }
 
     private fun setUpBanner(view: View) {
         view.viewPagerBanner.adapter = AdapterBanner(this)
         dotsIndicatorBanner.attachTo(viewPagerBanner)
     }
+
+
 
 
 }

@@ -57,7 +57,8 @@
                                 app:srcCompat="@drawable/ic_baseline_share_white_24dp" />
 
 
-                            <VideoView
+                            <com.google.android.exoplayer2.ui.PlayerView
+                                android:id="@+id/vdMovieTrailer"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent" />
                         </FrameLayout>
@@ -360,7 +361,6 @@
                         android:id="@+id/tvStoryLine"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/margin_medium_2"
                         android:layout_marginStart="@dimen/margin_medium_2"
                         android:layout_marginTop="@dimen/margin_medium_2"
                         android:layout_marginEnd="@dimen/margin_medium_2"
@@ -375,8 +375,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/tvStoryLine"
-                        android:layout_margin="@dimen/margin_medium_2"
+                        android:layout_marginStart="@dimen/margin_medium_2"
                         android:layout_marginTop="@dimen/margin_medium_2"
+                        android:layout_marginEnd="@dimen/margin_medium_2"
+                        android:layout_marginBottom="@dimen/margin_medium_2"
                         android:fontFamily="@font/inter_light"
                         android:text="Cast"
                         android:textColor="@color/white"
@@ -387,10 +389,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/tvCast"
-                        android:layout_marginTop="@dimen/margin_medium"
                         android:layout_marginBottom="@dimen/margin_medium"
                         android:clipToPadding="false"
-                        android:paddingStart="@dimen/margin_medium_2" />
+                        android:paddingStart="@dimen/margin_medium" />
 
                 </RelativeLayout>
 
@@ -401,6 +402,7 @@
         </androidx.core.widget.NestedScrollView>
 
         <View
+            android:id ="@+id/viewGradient"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_gravity="bottom"

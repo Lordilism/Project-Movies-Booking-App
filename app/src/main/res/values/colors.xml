@@ -25,8 +25,7 @@
     <color name="color_dotted_line">#33888888</color>
     <!--    outline Box-->
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#00FF6A</color>
-    
-    
+    <color name="colorRed">#FF2E20</color>
 
 
 </resources>
