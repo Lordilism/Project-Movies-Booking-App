@@ -32,22 +32,25 @@ class CheckOutActivity : AppCompatActivity() {
         setUpcheckoutRecyclerview()
         setUpCancelionPolicy()
         setUpBookingSuccess()
+        setUpListeners()
 
-        val isAbletoCancel = intent.getBooleanExtra(IE_TO_CHECKOUT_CANCEL,false)
-        when(isAbletoCancel){
-            false->{
+
+    }
+
+    private fun setUpListeners() {
+        val isAbletoCancel = intent.getBooleanExtra(IE_TO_CHECKOUT_CANCEL, false)
+        when (isAbletoCancel) {
+            false -> {
                 tvRefund.visibility = View.GONE
                 tvRefundAmount.visibility = View.GONE
                 btnCancelBooking.visibility = View.GONE
             }
-            true->{
+            true -> {
                 ivBtnContinue.visibility = View.GONE
                 tvTicketCancelionPolicy.setBackgroundColor(getColor(R.color.colorRed))
             }
 
         }
-
-
     }
 
     private fun setUpUiForCancel() {
@@ -74,6 +77,9 @@ class CheckOutActivity : AppCompatActivity() {
 //            },3000)
 
 
+        }
+        btnCancelBooking.setOnClickListener {
+            finish()
         }
 
     }

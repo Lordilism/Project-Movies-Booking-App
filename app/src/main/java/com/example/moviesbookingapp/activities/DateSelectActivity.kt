@@ -53,4 +53,8 @@ class DateSelectActivity : AppCompatActivity(), DateDelegate {
     override fun onTapDate() {
         startActivity(SeatSelectActivity.newIntent(this))
     }
+
+    override fun onTapDetails() {
+
+    }
 }

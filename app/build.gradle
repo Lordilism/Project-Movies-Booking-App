@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    compileSdk 33
+    compileSdk 32
 
     defaultConfig {
         applicationId "com.example.moviesbookingapp"
@@ -45,5 +45,5 @@ dependencies {
     implementation("com.tbuonomo:dotsindicator:4.3")
     implementation 'androidx.fragment:fragment-ktx:1.5.5'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
-    implementation 'com.google.android.exoplayer:exoplayer:2.18.3'
+
 }

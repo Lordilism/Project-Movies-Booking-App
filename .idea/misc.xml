@@ -18,6 +18,7 @@
         <entry key="app/src/main/res/drawable/background_rounded_corner_movies.xml" value="0.12" />
         <entry key="app/src/main/res/drawable/background_shape_colored_date.xml" value="0.12" />
         <entry key="app/src/main/res/drawable/background_sheet.xml" value="0.103" />
+        <entry key="app/src/main/res/drawable/background_spinner.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/background_ticket_cancelion.xml" value="0.12" />
         <entry key="app/src/main/res/drawable/bottom_nav_color.xml" value="0.1035" />
         <entry key="app/src/main/res/drawable/custom_line.xml" value="0.12" />
@@ -61,7 +62,7 @@
         <entry key="app/src/main/res/layout/activity_movies_details.xml" value="0.1814814814814815" />
         <entry key="app/src/main/res/layout/activity_payment.xml" value="0.21347305862991905" />
         <entry key="app/src/main/res/layout/activity_pick_location.xml" value="0.3058161350844278" />
-        <entry key="app/src/main/res/layout/activity_search.xml" value="0.2578125" />
+        <entry key="app/src/main/res/layout/activity_search.xml" value="0.21388888888888888" />
         <entry key="app/src/main/res/layout/activity_seat_select.xml" value="0.1814814814814815" />
         <entry key="app/src/main/res/layout/activity_ticket_confirmation.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_ticket_details.xml" value="0.2578125" />
@@ -86,7 +87,7 @@
         <entry key="app/src/main/res/layout/viewholder_inside_food_and_beverage.xml" value="0.25677083333333334" />
         <entry key="app/src/main/res/layout/viewholder_now_showing.xml" value="0.25081024169921873" />
         <entry key="app/src/main/res/layout/viewholder_payment.xml" value="0.2578125" />
-        <entry key="app/src/main/res/layout/viewholder_profile.xml" value="0.1814814814814815" />
+        <entry key="app/src/main/res/layout/viewholder_profile.xml" value="0.20194199173538774" />
         <entry key="app/src/main/res/layout/viewholder_seat.xml" value="0.24270833333333333" />
         <entry key="app/src/main/res/layout/viewholder_ticket_tab.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/viewpod_movies.xml" value="0.2274962429189088" />

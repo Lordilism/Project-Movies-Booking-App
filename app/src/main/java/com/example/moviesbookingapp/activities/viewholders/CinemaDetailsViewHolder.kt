@@ -13,8 +13,11 @@ class CinemaDetailsViewHolder(itemView: View, var isExpanded: Boolean, val conte
         isExpanded = false
         itemView.rlHideView.visibility = View.GONE
           setUpRecyclerViewTime()
-        itemView.tvSeeDetals.setOnClickListener {
+        itemView.setOnClickListener {
             setUpVisibilityOfLayout()
+        }
+        itemView.tvSeeDetals.setOnClickListener {
+            delegate.onTapDetails()
         }
 
     }

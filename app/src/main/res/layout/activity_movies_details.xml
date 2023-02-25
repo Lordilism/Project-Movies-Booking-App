@@ -57,7 +57,7 @@
                                 app:srcCompat="@drawable/ic_baseline_share_white_24dp" />
 
 
-                            <com.google.android.exoplayer2.ui.PlayerView
+                            <VideoView
                                 android:id="@+id/vdMovieTrailer"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent" />

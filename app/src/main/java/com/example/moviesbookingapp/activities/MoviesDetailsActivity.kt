@@ -5,22 +5,15 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
-import android.widget.MediaController
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isEmpty
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.moviesbookingapp.R
 import com.example.moviesbookingapp.activities.adapters.CastListAdapter
-import com.google.android.exoplayer2.ExoPlayer
-import com.google.android.exoplayer2.MediaItem
-import com.google.android.exoplayer2.ui.PlayerView
+import kotlinx.android.synthetic.main.activity_cinemas_details.*
 import kotlinx.android.synthetic.main.activity_movies_details.*
-import java.net.URI
-import java.net.URL
 
 class MoviesDetailsActivity : AppCompatActivity() {
     lateinit var mCastListAdapter: CastListAdapter
-    lateinit var player:ExoPlayer
 
 
     companion object {
@@ -44,30 +37,30 @@ class MoviesDetailsActivity : AppCompatActivity() {
     }
 
     private fun setUpVideo() {
-        player = ExoPlayer.Builder(this).build()
-        vdMovieTrailer.player = player
-
-        val uri =
-            Uri.parse("https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4")
-        val media = MediaItem.fromUri(uri)
-        (vdMovieTrailer.player as ExoPlayer).apply {
-            setMediaItem(media)
-            prepare()
-            play()
+        val uri = Uri.parse("android.resource://${packageName}/${R.raw.sample_trailor}")
+        vdMovieTrailer.apply {
+            setVideoURI(uri)
+            requestFocus()
+            start()
+            canPause()
         }
+
+
+
+
+
     }
 
     override fun onRestart() {
-
-
+        vdMovieTrailer.resume()
+        vdMovieTrailer.start()
         super.onRestart()
     }
 
     private fun navigateToDateSelect() {
         btnBooking.setOnClickListener {
             startActivity(DateSelectActivity.newIntent(this))
-            vdMovieTrailer.player?.stop()
-            vdMovieTrailer.player?.release()
+
         }
     }
 
@@ -80,8 +73,7 @@ class MoviesDetailsActivity : AppCompatActivity() {
 
     private fun setUpBackBtn() {
         btnBack.setOnClickListener {
-            vdMovieTrailer.player?.stop()
-            vdMovieTrailer.player?.release()
+
             super.onBackPressed()
         }
     }

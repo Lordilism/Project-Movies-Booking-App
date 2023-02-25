@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:paddingStart="@dimen/margin_medium_2"
     android:paddingEnd="@dimen/margin_medium_2"
-    android:paddingTop="@dimen/margin_card_medium_2"
+
     android:background="@color/colorPrimary">
 
     <RelativeLayout

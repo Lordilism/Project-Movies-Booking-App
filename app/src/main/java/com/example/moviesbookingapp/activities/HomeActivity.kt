@@ -4,8 +4,10 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.view.isVisible
 import androidx.fragment.app.commit
 import com.example.moviesbookingapp.R
 import com.example.moviesbookingapp.activities.adapters.AdapterBanner
@@ -18,6 +20,7 @@ import com.example.moviesbookingapp.activities.fragments.ProfileFragment
 import com.example.moviesbookingapp.activities.fragments.TicketsFragment
 import com.google.android.material.navigation.NavigationBarView
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.activity_movies_details.*
 import kotlinx.android.synthetic.main.fragment_movies.*
 
 class HomeActivity : AppCompatActivity() {
@@ -39,10 +42,12 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 //        setUpBottomNavigationWithViewPager()
         val citiesName = intent.getStringExtra("CITY_NAME").toString()
-        tvCitiesName.text = citiesName
+
         setUpListenerToolbar()
         setDefaultFragment()
         setUpBottomNavigation()
+
+
 
 
 
@@ -60,13 +65,25 @@ class HomeActivity : AppCompatActivity() {
             override fun onMenuItemClick(item: MenuItem?): Boolean {
                 when (item?.itemId) {
                     R.id.actionSearch -> {
-                        if (tabLayoutNsCs.selectedTabPosition==0){
-                            startActivity(
-                                SearchActivity.newIntent(this@HomeActivity,true)
-                            )
-                        }else{
-                            startActivity(SearchActivity.newIntent(this@HomeActivity,false))
+                        when(bottomNavigation.selectedItemId){
+                            R.id.actionMovies->{
+                                if (tabLayoutNsCs.selectedTabPosition==0){
+                                    startActivity(
+                                        SearchActivity.newIntent(this@HomeActivity,true)
+                                    )
+                                }else{
+                                    startActivity(SearchActivity.newIntent(this@HomeActivity,false))
+                                }
+                            }
+                            R.id.actionCinema->{
+                                startActivity(SearchActivity.newIntent1(this@HomeActivity,true))
+                            }
+                            R.id.actionProfile->{
+
+
+                            }
                         }
+
                     }
                 }
                 return false
